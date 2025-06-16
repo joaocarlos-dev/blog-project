@@ -12,10 +12,10 @@ export default function NotFoundPage() {
     >
       <div>
         <h1 className="text-7xl/tight mb-4 font-extrabold">404</h1>
-        <p className="font-semibold">
+        <div className="font-semibold">
           Erro 404 - A página que você está tentando acessar não existe neste
           site.
-        </p>
+        </div>
       </div>
     </div>
   );
