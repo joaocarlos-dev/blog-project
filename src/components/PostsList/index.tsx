@@ -1,10 +1,10 @@
 import { PostCoverImage } from "../PostCoverImage";
 
 import { PostSummary } from "../PostSummary";
-import { findAllPublicPosts } from "@/lib/post/queries";
+import { findAllPublicPostsCached } from "@/lib/post/queries";
 
 export async function PostsList() {
-  const posts = await findAllPublicPosts();
+  const posts = await findAllPublicPostsCached();
   return (
     <div className="grid grid-cols-1 mb-16 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {posts.slice(1).map((post) => {
