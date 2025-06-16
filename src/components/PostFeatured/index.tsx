@@ -21,6 +21,7 @@ export async function PostFeatured() {
           alt: post.title,
           priority: true,
         }}
+        linkUrl={postLink}
       />
       <PostSummary
         postHeading={"h1"}

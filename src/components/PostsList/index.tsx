@@ -22,6 +22,7 @@ export async function PostsList() {
                 src: post.coverImageUrl,
                 alt: post.title,
               }}
+              linkUrl={postLink}
             />
 
             <PostSummary

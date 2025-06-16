@@ -5,9 +5,14 @@ import Link from "next/link";
 type PostCoverImageProps = {
   imageProps: React.ComponentProps<typeof Image>;
   linkProps: React.ComponentProps<typeof Link>;
+  linkUrl: string;
 };
 
-export function PostCoverImage({ imageProps, linkProps }: PostCoverImageProps) {
+export function PostCoverImage({
+  imageProps,
+  linkProps,
+  linkUrl,
+}: PostCoverImageProps) {
   return (
     <Link
       {...linkProps}
@@ -18,7 +23,7 @@ export function PostCoverImage({ imageProps, linkProps }: PostCoverImageProps) {
         "rounded-xl",
         linkProps.className
       )}
-      href="#"
+      href={linkUrl}
     >
       <Image
         {...imageProps}
