@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Blog
 
-## Getting Started
+**The Blog** é um projeto de blog pessoal criado com o objetivo de estudar e aplicar tecnologias modernas de desenvolvimento web. Ele está sendo desenvolvido do zero com foco em práticas modernas de frontend, backend, banco de dados e testes.
 
-First, run the development server:
+---
+
+## Tecnologias Utilizadas
+
+### Frontend
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+
+### Backend
+
+- [NestJS](https://nestjs.com/)
+- [Node.js](https://nodejs.org/)
+
+### Banco de Dados
+
+- [SQLite](https://www.sqlite.org/index.html)
+
+### Testes
+
+- [Playwright](https://playwright.dev/) (testes end-to-end)
+- [Vitest](https://vitest.dev/) (testes unitários e de integração)
+
+---
+
+## Objetivos do Projeto
+
+Este projeto tem como objetivo principal servir como ambiente de experimentação e aprendizado das seguintes tecnologias e práticas:
+
+- Construção de aplicações fullstack com **Next.js** e **NestJS**
+- Integração de banco de dados utilizando **SQLite**
+- Implementação de autenticação e autorização
+- Desenvolvimento de um **CRUD completo** para gerenciamento de posts
+- Escrita e execução de **testes automatizados** com Playwright e Vitest
+- Organização e estruturação de uma aplicação escalável
+
+---
+
+## Status do Projeto
+
+**Em desenvolvimento**
+
+- ✅ Estrutura inicial do projeto
+- ✅ Frontend construído com Next.js + React
+- ✅ Banco de dados SQLite configurado
+- 🔄 Backend em desenvolvimento (NestJS)
+- 🔜 Sistema de autenticação
+- 🔜 CRUD de posts
+- 🔜 Testes automatizados com Vitest e Playwright
+
+---
+
+## Funcionalidades Planejadas
+
+- ✅ Página individual para cada post
+- [ ] Login e Registro de Usuários
+- [ ] Painel de Administração para gerenciamento de posts
+- [ ] Listagem pública de posts com data e autor
+- [ ] Sistema de criação, edição e exclusão de posts (CRUD)
+- [ ] Testes automatizados de componentes, rotas e lógica de negócios
+
+---
+
+## Como Executar o Projeto
+
+> _Certifique-se de ter o Node.js instalado em sua máquina._
 
 ```bash
+# Clone o repositório
+https://github.com/joaocarlos-dev/blog-project.git
+cd blog-project
+
+# Instale as dependências
+npm install
+
+# Execute o frontend (Next.js)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Autor
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido por **João Henrique** — [@joaocarlos-dev](https://github.com/joaocarlos-dev)
+Caso tenha sugestões, dúvidas ou queira trocar uma ideia, fique à vontade para entrar em contato!
