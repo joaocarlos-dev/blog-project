@@ -85,5 +85,5 @@ npm run dev
 
 ## Autor
 
-Desenvolvido por **João Henrique** — [@joaocarlos-dev](https://github.com/joaocarlos-dev)
+Desenvolvido por **João Henrique** [@joaocarlos-dev](https://github.com/joaocarlos-dev)
 Caso tenha sugestões, dúvidas ou queira trocar uma ideia, fique à vontade para entrar em contato!
