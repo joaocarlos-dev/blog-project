@@ -28,8 +28,9 @@ export function DeletePostButton({ id, title }: DeletePostButtonProps) {
       if (result.error) {
         setShowDialog(false);
         toast.error(result.error);
+        return;
       }
-      toast.success(result.error);
+      toast.success(`Post apagado com sucesso`);
     });
   }
 

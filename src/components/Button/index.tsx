@@ -46,7 +46,7 @@ export function Button({
   const buttonClasses = clsx(
     buttonVariants[variant],
     buttonSizes[size],
-    "flex items-center justify-center",
+    "flex items-center justify-center cursor-pointer",
     "transition",
     "disabled:bg-slate-200",
     "disabled:text-slate-400",
