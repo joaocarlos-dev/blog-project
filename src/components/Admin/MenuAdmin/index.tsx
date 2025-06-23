@@ -22,10 +22,12 @@ export function MenuAdmin() {
 
   const navClasses = clsx(
     "bg-slate-900 text-slate-100 rounded-lg mb-8",
-    "flex flex-col transition-all ease-in-out duration-400 overflow-hidden",
-    isOpen ? "max-h-100" : "max-h-10",
-    "sm:max-h-none sm:h-auto sm:overflow-visible sm:flex-row sm:flex-wrap"
+    "flex flex-col overflow-hidden",
+    "transition-all ease-in-out duration-300",
+    isOpen ? "max-h-240" : "max-h-10",
+    "sm:flex-row sm:flex-wrap sm:overflow-visible sm:h-auto sm:max-h-none"
   );
+
   const linkClasses = clsx(
     "px-4",
     "flex items-center justify-start gap-2 cursor-pointer",
@@ -74,19 +76,7 @@ export function MenuAdmin() {
 
       <Link className={linkClasses} href={"/admin/post/new"}>
         <PlusIcon size={16} />
-        Posts
-      </Link>
-      <Link className={linkClasses} href={"/admin/post/new"}>
-        <PlusIcon size={16} />
-        Posts
-      </Link>
-      <Link className={linkClasses} href={"/admin/post/new"}>
-        <PlusIcon size={16} />
-        Posts
-      </Link>
-      <Link className={linkClasses} href={"/admin/post/new"}>
-        <PlusIcon size={16} />
-        Posts
+        Criar post
       </Link>
     </nav>
   );
