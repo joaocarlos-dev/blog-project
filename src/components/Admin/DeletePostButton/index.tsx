@@ -22,6 +22,7 @@ export function DeletePostButton({ id, title }: DeletePostButtonProps) {
 
   async function handleConfirm() {
     toast.dismiss();
+
     startTransition(async () => {
       const result = await deletePostAction(id);
       if (result.error) {
