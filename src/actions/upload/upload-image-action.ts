@@ -5,7 +5,6 @@ import {
   IMAGE_UPLOAD_DIRECTORY,
   IMAGE_UPLOAD_MAX_SIZE,
 } from "@/lib/constants";
-import { AsyncDelay } from "@/utils/async-delay";
 import { mkdir, writeFile } from "fs/promises";
 import { extname, resolve } from "path";
 
@@ -17,7 +16,6 @@ type uploadImageActionResult = {
 export async function uploadImageAction(
   formData: FormData
 ): Promise<uploadImageActionResult> {
-  AsyncDelay(5000, true);
   const makeResult = ({ url = "", error = "" }) => ({ url, error });
 
   if (!(formData instanceof FormData)) {
