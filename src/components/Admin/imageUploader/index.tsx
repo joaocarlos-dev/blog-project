@@ -44,7 +44,7 @@ export function ImageUploader({ disabled }: ImageUploaderProps) {
       Number(process.env.NEXT_PUBLIC_IMAGE_UPLOAD_MAX_SIZE) || 921600;
 
     if (file.size > uploadMaxSize) {
-      const readableMaxSize = uploadMaxSize / 1024;
+      const readableMaxSize = (uploadMaxSize / 1024).toFixed(2);
 
       toast.error(`Imagem muito grande. Max: ${readableMaxSize}KB`);
 
