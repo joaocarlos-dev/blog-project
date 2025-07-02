@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@uiw/react-md-editor": "^4.0.7",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
     "better-sqlite3": "^11.10.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
