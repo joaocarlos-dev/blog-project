@@ -5,6 +5,7 @@ import {
   makePublicPostFromDb,
   PublicPost,
 } from "@/dto/post/dto";
+import { verifyLoginSession } from "@/lib/login/manage-login";
 import { PostUpdateSchema } from "@/lib/post/validations";
 import { postRepository } from "@/repositories/post";
 import { getZodErrorMessages } from "@/utils/get-zod-error-messages";
@@ -21,6 +22,7 @@ export async function updatePostAction(
   prevState: updatePostActionState,
   formdata: FormData
 ): Promise<updatePostActionState> {
+  const isAuthenticated = await verifyLoginSession();
   if (!(formdata instanceof FormData)) {
     return {
       formState: prevState.formState,
@@ -38,6 +40,13 @@ export async function updatePostAction(
 
   const formDataToObject = Object.fromEntries(formdata.entries());
   const zodParsedObj = PostUpdateSchema.safeParse(formDataToObject);
+
+  if (!isAuthenticated) {
+    return {
+      formState: makePartialPublicPost(formDataToObject),
+      errors: ["Faça login em outra aba antes de salvar"],
+    };
+  }
 
   if (!zodParsedObj.success) {
     const errors = getZodErrorMessages(zodParsedObj.error.format());
