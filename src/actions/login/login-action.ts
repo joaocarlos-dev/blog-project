@@ -10,6 +10,15 @@ type loginActionState = {
 };
 
 export async function loginAction(state: loginActionState, formdata: FormData) {
+  const allowLogin = Boolean(Number(process.env.ALLOW_LOGIN));
+
+  if (!allowLogin) {
+    return {
+      username: "",
+      error: "Login not allowed",
+    };
+  }
+
   await AsyncDelay(2000); // Manter para atrasar brute force
 
   if (!(formdata instanceof FormData)) {
