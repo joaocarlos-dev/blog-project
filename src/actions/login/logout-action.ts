@@ -1,7 +1,9 @@
 "use server";
 
-import { AsyncDelay } from "@/utils/async-delay";
+import { deleteLoginSession } from "@/lib/login/manage-login";
+import { redirect } from "next/navigation";
 
 export async function logoutAction() {
-  await AsyncDelay(2000); // Manter para atrasar brute force
+  await deleteLoginSession();
+  redirect("/");
 }
