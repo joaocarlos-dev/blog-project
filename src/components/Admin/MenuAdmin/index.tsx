@@ -91,14 +91,13 @@ export function MenuAdmin() {
       </Link>
 
       <a onClick={handleLogout} href="#" className={linkClasses}>
-        !
         {isPending && (
           <>
             <HourglassIcon />
             Aguarde...
           </>
         )}
-        {isPending && (
+        {!isPending && (
           <>
             <LogOutIcon />
             Sair
