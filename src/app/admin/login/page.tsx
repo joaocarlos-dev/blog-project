@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AdminLoginPage() {
-  const allowLogin = Boolean(Number(process.env.ALLOW_LOGIN));
+  const allowLogin = true;
 
   if (!allowLogin) {
     return (
